@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day2</title>
+</head>
+<body>
+    <script>
+        //IIFE function
+        /*************/
+
+        //IIFE function is a function which have no namne. this function is used to avoid name collision from the program
+        
+        (function (){
+            var x="sushil";
+            alert(x);
+        })();
+
+         //differencer between arguments and parameters
+        /********************************************/
+
+        function sum(a,b){      //a and b is parameter.
+            return a+b;
+        }
+        console.log(sum(5,7));   //5 and 7 is arguments.
+
+        //difference between var and let
+        /******************************/
+
+        //var keyword is used to declare variable globally. that means if we create a variable in a perticular block of scope then the variable also can be accessed outside of that block
+        for(var i=0;i<5;i++){
+            console.log(i);
+        }
+        console.log("value of i after block scope");
+        console.log(i);//output : 5
+
+
+        //let keyword is used to declare variable locally. that means we can't access the variable which is declared using let outside the block of the variable
+        for(let j=0;j<5;j++){
+            console.log(j);
+        }
+        console.log("value of j after block scope");
+        console.log(j);// output : j is not defined
+
+
+       
+    </script>
+</body>
+</html>
